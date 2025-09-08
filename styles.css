@@ -1,0 +1,144 @@
+body{
+   margin: 0;
+   font-family: Arial , sans-serif;
+   background-image: url("imagenes/fondoprincipal.png");
+   background-size: cover;
+   background-position: center;
+   background-attachment:fixed;
+   color:#fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1a1a47;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #ffcc00;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.nav-links a {
+    color:#fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.main-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-box{
+    background-color: #2e2e77;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 450px;
+    text-align: center;
+}
+
+.login-box h2{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.login-form .form-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.input-fields{
+    flex: 1;
+
+}
+
+.access-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.access-buttons button:hover{
+    background-color: #6666cc;
+    transition: background-color 0.3s;
+
+}
+
+.access-buttons button:active{
+    background-color: #ffcc00;
+    color: #000;
+
+}
+
+.access-buttons button{
+    background-color: #444499;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.access-buttons button.active{
+    background-color: #ff9900;
+}
+
+.btn:hover{
+    background-color: #6666cc;
+    transition: background-color 0.3s;
+}
+
+.btn:active{
+    background-color: #ffcc00;
+    color: #0000;
+}
+
+
+.input-group{
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444499;
+    background-color: #222255;
+    color:#fff;
+    border-radius: 5px;
+}
+
+.btn{
+    width: 100%;
+    padding: 12px;
+    background-color: #444499;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top:20px;
+
+}
+.register-link , 
+.main-menu-link{
+    display:block;
+    margin-top: 15px;
+    color: #ff9900;
+    text-decoration: none;
+
+}
