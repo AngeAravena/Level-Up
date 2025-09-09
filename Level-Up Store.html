@@ -12,6 +12,98 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 
   <style>
+
+        /* aquí va el bloque de CSS */
+
+    .catalogo {
+  display: flex;
+  justify-content: left;
+
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap; /* para que los productos se ajusten en varias filas si es necesario */
+  width: 75%;
+  
+  box-sizing: border-box;
+  font-family: Roboto ,sans-serif;
+}
+
+.producto {
+  width: 25%; /* aprox 1/5 de la pantalla */
+  min-width: 200px; /* para que no se haga muy pequeño en pantallas grandes */
+  max-width: 250px; /* lo mismo pero muy grande en pantallas pequeñas */
+  height: 280px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.fondo {
+  height: 100%;
+  background-image: url("imagenes/fondoOscuro.jpg");
+  background-size: auto;
+  background-position: center;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  color: white; /* para resaltar sobre el fondo oscuro */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img-producto {
+  width: 70%;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+  max-height: 120px; /* para que no se salga del contenedor */
+  object-fit: contain; /* para que la imagen mantenga su proporción */
+
+}
+
+.nombre {
+
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+  white-space: nowrap;           /* No permite saltos de línea */
+  overflow: hidden;              /* Oculta el texto que se sale */
+  text-overflow: ellipsis;       /* Muestra "..." si es muy largo */
+  cursor: pointer;               /* Opcional: cursor de ayuda */
+  width: 100%;
+  display: block;
+}
+
+.detalles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ver-mas a{
+  font-size: 0.8em;
+  color: #ddd;
+  cursor: pointer;
+  font-weight: normal;
+  text-decoration: none;
+  transition: color 0.3s;
+  
+  
+}
+
+.ver-mas a:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+    
     body {
       margin: 0;
       font-family: "Press Start 2P", cursive;
@@ -123,8 +215,9 @@
 .ver-productos-bar {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin: 40px 0 10px 0;
+  justify-content: flex-start;
+  margin: 1px 0 1px 0;
+  padding-left: 100px;
 }
 
 .ver-productos-link {
@@ -152,6 +245,25 @@
   height: 32px;
 }
 
+.main-content {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: flex-start; /* Alinea arriba ambos bloques */
+  gap: 30px;
+}
+
+.filtros {
+  width: 20%;
+  min-width: 200px;
+  background: rgba(24, 0, 80, 0.85);
+  color: #ffe600;
+  border-radius: 10px;
+  padding: 24px 18px;
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 
   </style>
 
@@ -185,127 +297,166 @@
 <!-- Barra ver productos con flecha -->
 <div class="ver-productos-bar">
   <a href="#productos" class="ver-productos-link">
-    <img src="imagenes/downarrow.png" alt="Flecha hacia abajo" class="flecha-abajo-img">
+    <img src="imagenes/flechaAbajo.png" alt="Flecha hacia abajo" class="flecha-abajo-img">
     ver productos
   </a>
 </div>
 
 
+
   <!-- Contenedor del catálogo -->
-<div class="catalogo">
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/mandoxbox.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="Controlador Inalámbrico Xbox Series X">Controlador Inalámbrico Xbox Series X</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$59.990 CLP</span>
+
+<div class="main-content">
+
+  <div class="catalogo">
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/mandoxbox.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="Controlador Inalámbrico Xbox Series X">Controlador Inalámbrico Xbox Series X</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$59.990 CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/hyperxaudifonos.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="Auriculares Gamer HyperX Cloud II">Auriculares Gamer HyperX Cloud II</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$79.990 CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/hyperxaudifonos.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="Auriculares Gamer HyperX Cloud II">Auriculares Gamer HyperX Cloud II</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$79.990 CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/catan.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="Catan">Catan</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$59.990 CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/catan.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="Catan">Catan</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$59.990 CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/carcassonne.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="Carcassonne">Carcassonne</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$24.990 CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/carcassonne.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="Carcassonne">Carcassonne</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$24.990 CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/ps5.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="PlayStation 1111111115">PlayStation 1111111115</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$549.990 CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/ps5.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="PlayStation 5">PlayStation 5</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$549.990 CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/pcasusrog.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="PC Gamer ASUS ROG Strix">PC Gamer ASUS ROG Strix</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$1.299.990CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/pcasusrog.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="PC Gamer ASUS ROG Strix">PC Gamer ASUS ROG Strix</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$1.299.990CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/sillasecretlab.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="Silla Gamer Secretlab Titan">Silla Gamer Secretlab Titan</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$349.990 CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/sillasecretlab.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="Silla Gamer Secretlab Titan">Silla Gamer Secretlab Titan</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$349.990 CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/mouse502.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="Mouse Gamer Logitech G502 HERO">Mouse Gamer Logitech G502 HERO</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$49.990 CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/mouse502.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="Mouse Gamer Logitech G502 HERO">Mouse Gamer Logitech G502 HERO</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$49.990 CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/polera.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="Polera Gamer Personalizada 'Level-Up'">Polera Gamer Personalizada 'Level-Up'</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$14.990 CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/polera.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="Polera Gamer Personalizada 'Level-Up'">Polera Gamer Personalizada 'Level-Up'</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$14.990 CLP</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="producto">
-    <div class="fondo">
-      <img src="imagenes/mousepadrazer.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="Mousepad Razer Goliathus Extended Chroma">Mousepad Razer Goliathus Extended Chroma</h3>
-      <div class="detalles">
-        <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
-        <span class="precio">$29.990 CLP</span>
+    <div class="producto">
+      <div class="fondo">
+        <img src="imagenes/mousepadrazer.png" alt="Producto" class="img-producto">
+        <h3 class="nombre" title="Mousepad Razer Goliathus Extended Chroma">Mousepad Razer Goliathus Extended Chroma</h3>
+        <div class="detalles">
+          <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
+          <span class="precio">$29.990 CLP</span>
+        </div>
       </div>
     </div>
+
+
+    
+    
+
+    
+
   </div>
+
+    <aside class="filtros">
+    <h2>Filtros</h2>
+    <form>
+      <label>
+        <input type="checkbox" name="categoria" value="consolas">
+        Consolas
+      </label><br>
+      <label>
+        <input type="checkbox" name="categoria" value="accesorios">
+        Accesorios
+      </label><br>
+      <label>
+        <input type="checkbox" name="categoria" value="juegos">
+        Juegos de Mesa
+      </label><br>
+      <label>
+        <input type="checkbox" name="categoria" value="ropa">
+        Ropa Gamer
+      </label><br>
+      <label>
+        <input type="checkbox" name="categoria" value="otros">
+        Otros
+      </label>
+      <br><br>
+      <button type="submit" style="background:#1800a0;color:#ffe600;border:none;padding:8px 18px;border-radius:8px;cursor:pointer;">Aplicar</button>
+    </form>
+  </aside>
+
 </div>
-
-
 
 
 
