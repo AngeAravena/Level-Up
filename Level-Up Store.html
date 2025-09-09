@@ -118,6 +118,41 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       flex-shrink: 0;
     }
+
+
+.ver-productos-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 10px 0;
+}
+
+.ver-productos-link {
+  display: flex;
+  align-items: center;
+  background: #1800a0;
+  color: #ffe600;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  padding: 18px 36px;
+  border-radius: 18px;
+  text-decoration: none;
+  gap: 14px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: background 0.2s;
+}
+
+.ver-productos-link:hover {
+  background: #2e00d1;
+}
+
+.flecha-abajo-img {
+  width: 32px;
+  height: 32px;
+}
+
+
   </style>
 
   
@@ -146,6 +181,14 @@
     <div class="right-image"></div>
   </div>
 
+
+<!-- Barra ver productos con flecha -->
+<div class="ver-productos-bar">
+  <a href="#productos" class="ver-productos-link">
+    <img src="imagenes/downarrow.png" alt="Flecha hacia abajo" class="flecha-abajo-img">
+    ver productos
+  </a>
+</div>
 
 
   <!-- Contenedor del catálogo -->
@@ -198,7 +241,7 @@
   <div class="producto">
     <div class="fondo">
       <img src="imagenes/ps5.png" alt="Producto" class="img-producto">
-      <h3 class="nombre" title="PlayStation 5">PlayStation 5</h3>
+      <h3 class="nombre" title="PlayStation 1111111115">PlayStation 1111111115</h3>
       <div class="detalles">
         <span class="ver-mas"><a href="URL_DETALLE.html">Ver más...</a></span>
         <span class="precio">$549.990 CLP</span>
@@ -260,103 +303,8 @@
       </div>
     </div>
   </div>
-
 </div>
 
-<head>
-  <style>
-    /* aquí va el bloque de CSS */
-
-    .catalogo {
-  display: flex;
-  justify-content: left;
-
-  gap: 20px;
-  margin: 30px 0;
-  flex-wrap: wrap; /* para que los productos se ajusten en varias filas si es necesario */
-  width: 75%;
-  
-  box-sizing: border-box;
-  font-family: Roboto ,sans-serif;
-}
-
-.producto {
-  width: 25%; /* aprox 1/5 de la pantalla */
-  min-width: 200px; /* para que no se haga muy pequeño en pantallas grandes */
-  max-width: 250px; /* lo mismo pero muy grande en pantallas pequeñas */
-  height: 280px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 20px;
-}
-
-.fondo {
-  height: 100%;
-  background-image: url("imagenes/fondoOscuro.jpg ");
-  background-size: auto;
-  background-position: center;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  color: white; /* para resaltar sobre el fondo oscuro */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.img-producto {
-  width: 70%;
-  border-radius: 5px;
-  margin: 0 auto;
-  display: block;
-  max-height: 120px; /* para que no se salga del contenedor */
-  object-fit: contain; /* para que la imagen mantenga su proporción */
-
-}
-
-.nombre {
-
-  margin: 10px 0 5px;
-  font-size: 1.1em;
-  white-space: nowrap;           /* No permite saltos de línea */
-  overflow: hidden;              /* Oculta el texto que se sale */
-  text-overflow: ellipsis;       /* Muestra "..." si es muy largo */
-  cursor: pointer;               /* Opcional: cursor de ayuda */
-  width: 100%;
-  display: block;
-}
-
-.detalles {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ver-mas a{
-  font-size: 0.8em;
-  color: #ddd;
-  cursor: pointer;
-  font-weight: normal;
-  text-decoration: none;
-  transition: color 0.3s;
-  
-  
-}
-
-.ver-mas a:hover {
-  color: yellow;
-  text-decoration: none;
-}
-
-.precio {
-  font-weight: bold;
-  font-size: 1em;
-}
-
-  </style>
-</head>
 
 
 
