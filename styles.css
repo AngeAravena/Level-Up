@@ -6,6 +6,13 @@ body{
    background-position: center;
    background-attachment:fixed;
    color:#fff;
+   background-color: #222255;
+}
+
+.fondo-morado , .fondo-morado .header,
+.fondo-morado .login-box {
+    background-color: #3a0057 !important;
+
 }
 
 .header {
@@ -65,6 +72,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    margin-top: 20px;
 }
 
 .access-buttons button:hover{
@@ -86,6 +94,7 @@ body{
     padding: 15px 35px;
     border-radius: 30px;
     cursor: pointer;
+    min-width: 100% ;
 }
 
 .access-buttons button.active{
@@ -141,4 +150,91 @@ body{
     color: #ff9900;
     text-decoration: none;
 
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-links a:hover{
+    background-color: #ffcc00;
+    color: #1a1a47;
+}
+
+.nav-links a:active{
+    background-color: #ff9900;
+    color: #fff;
+}
+
+.nav-links a{
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s , color 0.2s;
+}
+
+.menu{
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown {
+  display: none;
+  position: absolute;
+  background: #2e2e77;
+  color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #444499;
+  min-width: 180px;
+  z-index: 100;
+  white-space: nowrap;
+  left: -50px;
+  border-radius: 20px;
+}
+#dropdown li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px 10px 5px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  background: none;
+  text-align: center;
+}
+#dropdown li a:hover {
+  background: #444499;
+  color: #ffcc00;
+}
+
+#dropdown.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-link-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+.nav-link-btn:hover {
+  background-color: #ffcc00;
+  color: #1a1a47;
+}
+.nav-link-btn:active {
+  background-color: #ff9900;
+  color: #fff;
 }

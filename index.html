@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level_UP</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/levelupsf.ico">
+    <link rel ="preconnect" href="https://fonts.googleapis.com">
+    <link rel ="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="styles.css">
+</head>
+<body>
+    <div class ="header">
+    <h1>Level-UP Store</h1>
+    <div class ="nav-links">
+        <a href="#">Productos</a>
+        <a href="#">Notebooks</a>
+        <a href="#">Celulares</a>
+        <a href="#">Perfil</a>
+        <nav class="menu">
+            <button id="menu-btn" class="nav-link-btn">Más</button>
+            <ul id ="dropdown" class="hidden">
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+                <li><a href="#">Noticia</a></li>
+                <li><a href="#">Mandar ticket</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="main-container">
+    <div class="login-box">
+        <h2>Introduce tus datos para iniciar sesión</h2>
+       
+        <form class ="login-form"> 
+            <div class="form-content">
+                <div class="input-group">
+                    <div class="input-group">
+                <label for = "email">Correo electrónico</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class ="input-group">
+                <label for ="password">Contraseña</label>
+                <input type="password" id="password" name="password">
+            </div>
+        </div>
+            <div class="access-buttons">
+            <button class="active">Acceso cliente</button>
+            <button>Acceso empleado</button>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Iniciar</button>
+        </form>
+        <a href="#" class="register-link">Registrarse</a>
+        <a href="menu-principal.html" class ="main-menu-link">Menú principal</a>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+</body>
+</html>
