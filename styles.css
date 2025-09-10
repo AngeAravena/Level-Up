@@ -19,17 +19,21 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #1a1a47;
+    padding: 26.5px 50px;
+    background-color: #1400a8;
+
 }
 
 .header h1 {
-    font-size: 24px;
-    color: #ffcc00;
+    font-size: 1rem;
+    color: yellow;
     font-family: 'Press Start 2P', cursive;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .nav-links a {
+    font-family: 'Press Start 2P', cursive;
     color:#fff;
     text-decoration: none;
     margin-left: 20px;
@@ -143,7 +147,7 @@ body{
     margin-top:20px;
 
 }
-.register-link , 
+.register-link ,
 .main-menu-link{
     display:block;
     margin-top: 15px;
@@ -161,6 +165,7 @@ body{
 .nav-links a:hover{
     background-color: #ffcc00;
     color: #1a1a47;
+    text-shadow: none;
 }
 
 .nav-links a:active{
@@ -172,11 +177,17 @@ body{
     padding: 8px 16px;
     border-radius: 8px;
     transition: background 0.2s , color 0.2s;
+    color: white;
+    text-decoration: none;
+    font-size: 0.55rem;
+    transition: color 0.3s;
 }
 
 .menu{
+    font-family: 'Press Start 2P', cursive;
     position: relative;
     display: inline-block;
+    
 }
 
 #dropdown {
@@ -191,7 +202,10 @@ body{
   min-width: 180px;
   z-index: 100;
   white-space: nowrap;
-  left: -50px;
+    top: 50px;
+    left: auto;
+    right: -10%;
+    margin-right: 0px;
   border-radius: 20px;
 }
 #dropdown li a {
@@ -218,23 +232,26 @@ body{
 }
 
 .nav-link-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.55rem;
+    cursor: pointer;
+    display: inline-block;
 }
 .nav-link-btn:hover {
-  background-color: #ffcc00;
-  color: #1a1a47;
+    background-color: #ffcc00;
+    color: #1a1a47;
+    text-decoration: none;
 }
 .nav-link-btn:active {
-  background-color: #ff9900;
-  color: #fff;
+    background-color: #ff9900;
+    color: #fff;
+    text-decoration: none;
 }

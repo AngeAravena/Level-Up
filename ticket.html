@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket - Level-UP Store</title>
+  <link rel="icon" href="imagenes/levelupsf.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+
+    <!-- Inicio del CSS -->
+  <style>
+
+    .navbar {
+  background-color: #1400a8;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.logo {
+  color: yellow;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.55rem;
+  transition: color 0.3s;
+  font-family: 'Press Start 2P', cursive;
+  
+}
+
+.nav-links a:hover {
+  background-color: #ffcc00;
+  color: #1a1a47;
+  text-shadow: none;
+}
+
+.menu {
+  position: static;
+  display: inline-block;
+}
+
+#menu-btn.nav-link-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  
+}
+
+#menu-btn.nav-link-btn:hover {
+  background-color: #ffcc00;
+  color: #1a1a47;
+}
+
+#menu-btn.nav-link-btn:active {
+  background-color: #ff9900;
+  color: #fff;
+}
+
+#dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #2e2e77;
+  border: 1px solid #444499;
+  border-radius: 12px;
+  min-width: 180px;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#dropdown.show {
+  display: block;
+}
+
+#dropdown li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  text-align: left;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#dropdown li a:hover {
+  background: #444499;
+  color: #ffcc00;
+}
+
+  </style>
+</head>
+<body>
+<nav class="navbar">
+    <div style="display: flex; align-items: center; width: 100%;">
+      <div class="logo">Level-UP Store</div>
+      <div style="flex:1; display:flex; justify-content: flex-end; align-items: center; gap: 25px;">
+        <div class="nav-links">
+          <a href="#productos">Productos</a>
+          <a href="#notebooks">Notebooks</a>
+          <a href="#celulares">Celulares</a>
+          <a href="#perfil">Perfil</a>
+        </div>
+        <div style="position:relative;">
+          <nav class="menu">
+            <button id="menu-btn" class="nav-link-btn">Más</button>
+            <ul id="dropdown" class="hidden">
+              <li><a href="#">Contacto</a></li>
+              <li><a href="LevelUpInicioSesion.html">Iniciar sesión</a></li>
+              <li><a href="#">Noticias</a></li>
+              <li><a href="ticket.html">Mandar ticket</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+</nav>
+
+  <div class="main-container">
+    <div class="login-box" style="max-width: 500px;">
+      <h2>Contacto</h2>
+      <form class="login-form">
+        <div class="form-content">
+          <div class="input-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" style="width:100%;padding:10px;border-radius:5px;background-color:#222255;color:#fff;border:1px solid #444499;"></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuBtn = document.getElementById('menu-btn');
+      var dropdown = document.getElementById('dropdown');
+      menuBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('show');
+      });
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target) && e.target !== menuBtn) {
+          dropdown.classList.remove('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

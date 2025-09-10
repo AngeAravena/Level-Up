@@ -151,9 +151,21 @@
       transition: color 0.3s;
     }
 
-    .nav-links a:hover {
-      color: #00ffea;
-    }
+.nav-links a:hover{
+    background-color: #ffcc00;
+    color: #1a1a47;
+}
+
+.nav-links a:active{
+    background-color: #ff9900;
+    color: #fff;
+}
+
+.nav-links a{
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s , color 0.2s;
+}
 
     
     .content-container {
@@ -265,22 +277,103 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+.menu {
+  position: static;
+  display: inline-block;
+}
+#dropdown {
+  right: 0;
+  left: auto;
+}
+
+#menu-btn.nav-link-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  
+}
+
+#menu-btn.nav-link-btn:hover {
+  background-color: #ffcc00;
+  color: #1a1a47;
+}
+
+#menu-btn.nav-link-btn:active {
+  background-color: #ff9900;
+  color: #fff;
+}
+
+#dropdown {
+  display: none;
+  position: absolute;
+  top: 40px; /* Ajusta según la altura de tu barra */
+  right: 0;
+  background: #2e2e77;
+  border: 1px solid #444499;
+  border-radius: 12px;
+  min-width: 180px;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#dropdown.show {
+  display: block;
+}
+
+#dropdown li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  text-align: left;
+}
+
+#dropdown li a:hover {
+  background: #444499;
+  color: #ffcc00;
+}
+
   </style>
 
   
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Level-UP Store</div>
-    <div class="nav-links">
-      <a href="#productos">Productos</a>
-      <a href="#notebooks">Notebooks</a>
-      <a href="#celulares">Celulares</a>
-      <a href="#perfil">Perfil</a>
-      <a href="#mas">Más</a>
-    </div>
-  </nav>
 
+<nav class="navbar">
+    <div style="display: flex; align-items: center; width: 100%;">
+      <div class="logo">Level-UP Store</div>
+      <div style="flex:1; display:flex; justify-content: flex-end; align-items: center; gap: 25px;">
+        <div class="nav-links">
+          <a href="#productos">Productos</a>
+          <a href="#notebooks">Notebooks</a>
+          <a href="#celulares">Celulares</a>
+          <a href="#perfil">Perfil</a>
+        </div>
+        <div style="position:relative;">
+          <nav class="menu">
+            <button id="menu-btn" class="nav-link-btn">Más</button>
+            <ul id="dropdown" class="hidden">
+              <li><a href="#">Contacto</a></li>
+              <li><a href="LevelUpInicioSesion.html">Iniciar sesión</a></li>
+              <li><a href="#">Noticias</a></li>
+              <li><a href="ticket.html">Mandar ticket</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+</nav>
   
   <div class="content-container">
     <section class="banner">
@@ -459,6 +552,22 @@
 </div>
 
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var menuBtn = document.getElementById('menu-btn');
+    var dropdown = document.getElementById('dropdown');
+    menuBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdown.classList.toggle('show');
+    });
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target) && e.target !== menuBtn) {
+        dropdown.classList.remove('show');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
